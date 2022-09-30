@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <title>Drum Machine</title>
+    <script>
+      function play(arg) {
+          document.getElementById(arg).play();
+          console.log(arg);
+          if(arg == 'Q'){
+            document.getElementById("display").innerText = "Heater 1";
+          } else if(arg == 'W'){
+            document.getElementById("display").innerText = "Heater 2";
+          } else if(arg == 'E'){
+            document.getElementById("display").innerText = "Heater 3";
+          } else if(arg == 'A'){
+            document.getElementById("display").innerText = "Heater 4";
+          } else if(arg == 'S'){
+            document.getElementById("display").innerText = "Clap";
+          } else if(arg == 'D'){
+            document.getElementById("display").innerText = "Open HH";
+          } else if(arg == 'Z'){
+            document.getElementById("display").innerText = "Kick n' Hat";
+          } else if(arg == 'X'){
+            document.getElementById("display").innerText = "Kick";
+          } else if(arg == 'C'){
+            document.getElementById("display").innerText = "Closed HH";
+          }
+      }
+      window.document.onkeyup = function(key) {
+        let keyPlay = key.key;
+        console.log(keyPlay);
+        if(keyPlay == 'q' | keyPlay == 'Q'){
+          play('Q');
+        } else if(keyPlay == 'w' | keyPlay == 'W'){
+          play('W');
+        } else if(keyPlay == 'e' | keyPlay == 'E'){
+          play('E');
+        } else if(keyPlay == 'a' | keyPlay == 'A'){
+          play('A');
+        } else if(keyPlay == 's' | keyPlay == 'S'){
+          play('S');
+        } else if(keyPlay == 'd' | keyPlay == 'D'){
+          play('D');
+        } else if(keyPlay == 'z' | keyPlay == 'Z'){
+          play('Z');
+        } else if(keyPlay == 'x' | keyPlay == 'X'){
+          play('X');
+        } else if(keyPlay == 'c' | keyPlay == 'C'){
+          play('C');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="drum-machine">
+      <div id="displayBox">
+        <div id="display">-</div>
+      </div>
+      <div id="buttonsGrid">
+        <button class="drum-pad" id="heater-1" type="button" name="button" onClick="play('Q')">Q<audio class="clip" id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio></button>
+        <button class="drum-pad" id="heater-2" type="button" name="button" onClick="play('W')" accessKey="w">W<audio class="clip" id="W" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio></button>
+        <button class="drum-pad" id="heater-3" type="button" name="button" onClick="play('E')">E<audio class="clip" id="E" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"></audio></button>
+        <button class="drum-pad" id="heater-4" type="button" name="button" onClick="play('A')">A<audio class="clip" id="A" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"></audio></button>
+        <button class="drum-pad" id="clap" type="button" name="button" onClick="play('S')">S<audio class="clip" id="S" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"></audio></button>
+        <button class="drum-pad" id="open-hh" type="button" name="button" onClick="play('D')">D<audio class="clip" id="D" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"></audio></button>
+        <button class="drum-pad" id="kick-n-hat" type="button" name="button" onClick="play('Z')">Z<audio class="clip" id="Z" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"></audio></button>
+        <button class="drum-pad" id="kick" type="button" name="button" onClick="play('X')">X<audio class="clip" id="X" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"></audio></button>
+        <button class="drum-pad" id="closed-hh" type="button" name="button" onClick="play('C')">C<audio class="clip" id="C" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio></button>
+      </div>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

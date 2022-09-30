@@ -1,0 +1,21 @@
+#drum-machine {
+  max-width: 600px;
+  display: block;
+  margin: auto;
+  background-color: black;
+  padding-top: 20px;
+}
+#displayBox {
+  display: flex;
+  height: 20vh;
+  background-color: green;
+  font-size: 50px;
+  margin: 0 20px 20px 20px;
+  justify-content: center;
+  align-items: center;
+}
+#buttonsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 30vh;
+}
